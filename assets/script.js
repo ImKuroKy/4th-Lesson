@@ -45,6 +45,50 @@ function FirstTask()
     };
     document.write(firstUserValue + " " + mathAction + " " + secondUserValue + " = " + result + "<br/>");
 };
+function SecondTask()
+{
+    var userNumber = parseFloat(prompt("Введите число для анализа", "сюда"));
+    if (Math.sign(userNumber) == 0 || Math.sign(userNumber) == 1) {
+        document.write(`Число ${userNumber} положительное.<br/>`);
+    } else if (Math.sign(userNumber) == -0 || Math.sign(userNumber) == -1) {
+        document.write(`Число ${userNumber} отрицательное.<br/>`);
+    };
+    var i = 2;
+    const limit = Math.sqrt(userNumber);
+    while (i <= limit) {
+        i +=1;
+    };
+    if (userNumber % i === 0) {
+        document.write(`Число ${userNumber} - составное число.<br/>`);
+    } else {
+        document.write(`Число ${userNumber} - простое число.<br/>`);
+    };
+    if (userNumber % 2 == 0) {
+        document.write(`Число ${userNumber} делится на 2 без остатка.<br/>`);
+    } else {
+        document.write(`Число ${userNumber} не делится на 2 без остатка.<br/>`);
+    };
+    if (userNumber % 3 == 0) {
+        document.write(`Число ${userNumber} делится на 3 без остатка.<br/>`);
+    } else {
+        document.write(`Число ${userNumber} не делится на 3 без остатка.<br/>`);
+    };
+    if (userNumber % 5 == 0) {
+        document.write(`Число ${userNumber} делится на 5 без остатка.<br/>`);
+    } else {
+        document.write(`Число ${userNumber} не делится на 5 без остатка.<br/>`);
+    };
+    if (userNumber % 6 == 0) {
+        document.write(`Число ${userNumber} делится на 6 без остатка.<br/>`);
+    } else {
+        document.write(`Число ${userNumber} не делится на 6 без остатка.<br/>`);
+    };
+    if (userNumber % 9 == 0) {
+        document.write(`Число ${userNumber} делится на 9 без остатка.<br/>`);
+    } else {
+        document.write(`Число ${userNumber} не делится на 9 без остатка.<br/>`);
+    };
+};
 var running = true;
 while (running == true)
 {
@@ -64,8 +108,13 @@ while (running == true)
             break;
         case "2":
             {
+                /*Напишите функцию, которая будет принимать число и определять: 
+                1. Является ли введенное число положительным или отрицательным. 
+                2. Является ли оно простым.
+                3. Делится ли оно на 2, 5, 3, 6, 9 без остатка.
+                */
                 document.write("<H3>Задание 2</H3><br/>");
-                
+                SecondTask();
             };
             break;
         default:
